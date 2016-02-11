@@ -1,35 +1,31 @@
 <!doctype html>
-<html ng-app="myApp">
+<html data-ng-app="HomeScreen">
 <head>
     <meta charset="UTF-8">
+    <title> Demo </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript">
 
-    <title></title>
+    var app = angular.module('HomeScreen', []);
+    app.controller('SimpleCtrl', function($scope) {
+        $scope.title = "Susisiekite su mumis";
+        $scope.register = "Registruokitės konsultacijai internetu";
+        $scope.contacts = "Parašykite mums";
+        document.title = $scope.title;
+    });
+    </script>
 
 
 </head>
 
 
 <body>
-
 <div data-ng-controller="SimpleCtrl">
-
     <h1 align="center"> {{ title }} </h1>
     <h1 align="center"><a href="register.html">{{ register }}</a></h1>
     <h1 align="center"><a href="contact.html">{{ contacts }}</a></h1>
-
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-<script type="text/javascript">
-
-    var app = angular.module('myApp', []);
-    app.controller('SimpleCtrl', function($scope) {
-        $scope.title = "asd";
-        $scope.register = "ddd";
-        $scope.contacts = "aa";
-    });
-
-</script>
 
 
 </body>
